@@ -1,0 +1,64 @@
+.section4-container {
+    background-color: #F7F7F7;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    padding-top: 100px;
+    justify-content: center;
+    align-items: center;
+}
+
+.section4-container h1 {
+    max-width: 750px;
+    font-size: 50px;
+    text-align: center;
+}
+
+.explanation  {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    align-items: center;
+}
+
+.text {
+    display: flex;
+    padding-top: 50px;
+    flex-direction: column;
+    max-width: 430px;
+    height: auto;
+  }
+
+.explanation img {
+    width: 550px;
+    border: solid 1px black;
+    border-radius: 20px;
+    height: 400px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.icon-set {
+    width: 200px;
+    height: 50px;
+    border: 1px solid black;
+    border-radius: 30px;
+    text-align: center;
+    display: flex;
+    background-color: white;
+    margin-top: 50px;
+    align-items: center;
+    color: black;
+    margin-bottom: 100px;
+    justify-content: center;
+}
+
+.icon-set a {
+    text-decoration: none;
+    color: black;
+}

@@ -1,0 +1,29 @@
+.section3-container {
+    display: flex;
+    margin-top: 100px;
+    font-family: 'Poppins', sans-serif;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.section3-title {
+    text-align: center;
+}
+
+.image3-wrapper {
+    display: flex;
+    margin-top: 50px;
+    flex-direction: row;
+    gap: 100px;
+}
+
+.image-border {
+    border: solid 1px black;
+    border-radius: 20px;
+}
+
+.image3-wrapper img {
+    width: 400px;
+    height: 400px;
+}
