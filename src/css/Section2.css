@@ -5,7 +5,6 @@
     background-color: white;
     display: flex;
     flex-direction: column;
-    overflow: hidden;
     align-items: center;
 }
 
@@ -40,7 +39,7 @@
     align-items: center;
 }
 
-.product-explanation {
+.product-2-explanation {
     display: flex;
     justify-content: center;
     gap: 20px;
@@ -50,6 +49,7 @@
 
 .image-card-bordered {
     border: 1px solid black;
+    overflow: hidden;
     border-radius: 20px;
 }
 
@@ -73,21 +73,20 @@
     border: 1px solid black;
     border-radius: 20px;
     display: flex;
-    width: 61vw;
-    align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    width: auto;
 }
 
 .figma-request .brand-figma {
-    width: 520px;
-    border-left: 1px solid black;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
+    width: auto;
+    height: 400px;
 }
 
+
 .figma-description {
-    max-width: 400px;
-    margin-left: 30px;
+    padding: 20px;
+    margin: 0;
+    max-width: 450px;
 }
 
 .request-file {
@@ -109,7 +108,7 @@
 
 .webflow-templates {
     display: flex;
-    width: 61vw;
+    width: auto;
     margin-top: 50px;
     border: 1px solid black;
     border-radius: 20px;
@@ -117,7 +116,7 @@
 }
 
 .webflow-templates .imageWebflow {
-    width: 500px;
+    width: auto;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
     height: 400px;
@@ -125,11 +124,12 @@
 }
 
 .webflow-description {
-    max-width: 300px;
+    max-width: 450px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-left: 50px;
+    padding-left: 60px;
+    padding-right: 90px;
 }
 
 .dotIcon {
@@ -195,7 +195,7 @@
 }
 
 .mainPage-container {
-
+    
     display: flex;
     flex-direction: column;
     width: 100vw;
@@ -243,10 +243,8 @@
     width: 100%;
     box-sizing: border-box;
     aspect-ratio: 16 / 9;
-    /* Maintain aspect ratio */
     overflow: hidden;
     background-color: #f8f8f8;
-    /* Light background for container */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -276,10 +274,60 @@
     /* Make the title a bit bolder */
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
-    .mainPage-explanation {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        /* Adjust for smaller screens */
+    .figma-request {
+        border: 1px solid black;
+        width: 310px;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
     }
+
+    .figma-description {
+        width: 250px;
+    }
+
+    .figma-description p {
+        width: 250px;
+    }
+
+    .webflow-templates {
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        height: auto;
+        overflow: hidden;
+    }
+
+    .webflow-description {
+        padding: 5px;
+        width: 290px;
+        padding-top: 5px;
+        padding-bottom: 20px;
+    }
+
+    .imageWebflow {
+        width: 300px;
+        border-bottom: solid 2px black;
+        border-right: solid 2px black;
+    }
+
+    .request-file {
+        width: auto;
+    }
+
+    .template-button {
+        width: auto;
+    }
+
+    .buy-template {
+        width: 80%;
+    }
+
+    .mainPage-explanation {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+    
 }

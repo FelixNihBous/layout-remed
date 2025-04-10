@@ -35,8 +35,8 @@ function Section4() {
                         <div className='buy-template'>
                             <a href="buy-button">Buy Template</a>
                         </div>
-                        <div className='icon-set'>
-                            <a href="">Download icon set</a>
+                        <div className='icon-set' >
+                            <a style={{fontSize: '1px;'}} href="">Download icon set</a>
                         </div>
                     </div>
                 </div>

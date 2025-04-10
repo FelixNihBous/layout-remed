@@ -1,14 +1,24 @@
 import React from 'react'
+import gsap from 'gsap';
 import '../css/Section1.css'
 
 
 function Section1Body() {
+
   return (
     <div className='body-container'>
       <div className='body-content'>
         <h1>Brandingfolio X Webflow Template</h1>
         <p>Presenting Brandingfolio X, the ultimate Branding Agency Webflow Template.</p>
+        <div className='btn-wrapper'>
 
+          <div className='buy-btn'>
+            <a href="buy-btn-home">Buy Template</a>
+          </div>
+          <div className="white-explore-btn">
+            <a href="white-explore-button">Explore Pages</a>
+          </div>
+        </div>
 
       </div>
 

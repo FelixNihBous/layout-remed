@@ -1,3 +1,4 @@
+/* Existing CSS (Do Not Modify) */
 .section4-container {
     background-color: #F7F7F7;
     font-family: 'Poppins', sans-serif;
@@ -19,6 +20,7 @@
     justify-content: center;
     gap: 50px;
     align-items: center;
+    margin-bottom: 50px; /* Add some spacing between explanations */
 }
 
 .text {
@@ -27,7 +29,7 @@
     flex-direction: column;
     max-width: 430px;
     height: auto;
-  }
+}
 
 .explanation img {
     width: 550px;
@@ -61,4 +63,60 @@
 .icon-set a {
     text-decoration: none;
     color: black;
+}
+
+
+@media (max-width: 768px) {
+    .section4-container {
+       overflow: hidden;
+    }
+
+    .explanation {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    .explanation:nth-child(odd) {
+        flex-direction: column-reverse;
+    }
+
+    .explanation:nth-child(even) {
+        flex-direction: column;
+    }
+
+    .text {
+        padding: 0;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .buy-template {
+        padding: 0;
+        margin-top: 20px;
+        margin-bottom: 0;
+    }
+
+    .explanation img {
+        width: 95%;
+        height: auto;
+    }
+
+    .button-container {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .icon-set {
+        width: 80%;
+        margin: 0;
+    }
 }

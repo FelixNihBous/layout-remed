@@ -10,126 +10,132 @@
   margin-top: 20px;
   font-family: 'Poppins', sans-serif;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /* Responsive columns */
-  gap: 30px; /* Spacing between grid items (for two-column layout) */
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  /* Responsive columns */
+  gap: 30px;
+  /* Spacing between grid items (for two-column layout) */
   padding: 40px;
   box-sizing: border-box;
   justify-content: center;
   align-items: center;
 }
 
-/* Media query for smaller screens (adjust the breakpoint as needed) */
-@media (max-width: 800px) {
-  .section5-container {
-    grid-template-columns: 1fr; /* Force single column */
-    gap: 0; /* Remove the gap in single column layout */
-  }
+.buy-wrapper {
+  padding: 30px;
+  background-color: #146EF5;
+  border-radius: 20px;
+  color: white;
+  box-sizing: border-box;
+  overflow: hidden;
+  margin: 20px auto;
+  border: 1px solid black;
+  width: 450px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  /* max-width: 450px; <--- Keep this if you want a maximum width, but be mindful of content size */
 }
 
+.buy-explanation {
+  border: 1px solid black;
+  border-radius: 20px;
+  background-color: white;
+  width: 90px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.webflow-logo {
+  width: 60px;
+  height: 60px;
+}
+
+.white-buy-template {
+  width: 100%;
+  height: 70px;
+  border: 1px solid black;
+  border-radius: 30px;
+  text-align: center;
+  display: flex;
+  background-color: white;
+  margin-top: 50px;
+  align-items: center;
+  color: black;
+  margin-bottom: 20px;
+  /* Adjusted margin-bottom */
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.white-buy-template a {
+  text-decoration: none;
+  color: black;
+}
+
+.button-image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.imgBuy {
+  width: 1000px;
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+
+.all-template {
+  padding: 30px;
+  background-color: white;
+  border-radius: 20px;
+  color: black;
+  box-sizing: border-box;
+  overflow: hidden;
+  margin: 20px auto;
+  border: 1px solid black;
+  width: 450px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  /* max-width: 450px; <--- Keep this if you want a maximum width, but be mindful of content size */
+}
+
+.purple-template-button {
+  width: 100%;
+  height: 70px;
+  border: 1px solid black;
+  border-radius: 30px;
+  text-align: center;
+  display: flex;
+  background-color: #553FFE;
+  margin-top: 50px;
+  align-items: center;
+  color: black;
+  margin-bottom: 20px;
+  /* Adjusted margin-bottom */
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+
+.purple-template-button a {
+  text-decoration: none;
+  color: black;
+}
+
+@media (max-width: 768px) {
   .buy-wrapper {
-    padding: 30px;
-    background-color: #146EF5;
-    border-radius: 20px;
-    color: white;
-    box-sizing: border-box;
-    overflow: hidden;
-    margin: 20px auto;
-    border: 1px solid black;
-    width: 450px;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    /* max-width: 450px; <--- Keep this if you want a maximum width, but be mindful of content size */
-  }
-
-  .buy-explanation {
-    border: 1px solid black;
-    border-radius: 20px;
-    background-color: white;
-    width: 90px;
-    height: 90px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 20px;
-  }
-
-  .webflow-logo {
-    width: 60px;
-    height: 60px;
-  }
-
-  .white-buy-template {
-    width: 100%;
-    height: 70px;
-    border: 1px solid black;
-    border-radius: 30px;
-    text-align: center;
-    display: flex;
-    background-color: white;
-    margin-top: 50px;
-    align-items: center;
-    color: black;
-    margin-bottom: 20px; /* Adjusted margin-bottom */
-    justify-content: center;
-    box-sizing: border-box;
-  }
-
-  .white-buy-template a {
-    text-decoration: none;
-    color: black;
-  }
-
-  .button-image-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-  }
-
-  .imgBuy {
-    width: 1000px;
-    display: block;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    box-sizing: border-box;
+    width: 350px;
   }
 
   .all-template {
-    padding: 30px;
-    background-color: white;
-    border-radius: 20px;
-    color: black;
-    box-sizing: border-box;
-    overflow: hidden;
-    margin: 20px auto;
-    border: 1px solid black;
-    width: 450px;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    /* max-width: 450px; <--- Keep this if you want a maximum width, but be mindful of content size */
+    width: 350px;
   }
-
-  .purple-template-button {
-    width: 100%;
-    height: 70px;
-    border: 1px solid black;
-    border-radius: 30px;
-    text-align: center;
-    display: flex;
-    background-color: #553FFE;
-    margin-top: 50px;
-    align-items: center;
-    color: black;
-    margin-bottom: 20px; /* Adjusted margin-bottom */
-    justify-content: center;
-    box-sizing: border-box;
-  }
-
-
-  .purple-template-button a {
-    text-decoration: none;
-    color: black;
-  }
+}

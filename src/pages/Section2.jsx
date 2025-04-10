@@ -94,11 +94,11 @@ function Section2() {
         <p>Brandingfolio X Webflow Template includes over 19 pages in total, with more than 35 sections.</p>
       </div>
       <div className="section2-content">
-        <div className='product-explanation'>
+        <div className='product-2-explanation'>
           {imageData.map((item, index) => (
             <div className="image-card-bordered" key={index}>
               <div className="image-container-bordered">
-                <img src={item.imageSrc} alt={item.title} />
+                <img className='imageSection2' src={item.imageSrc} alt={item.title} />
               </div>
               <div className="card-content-bordered">
                 <p>{item.title}</p>
@@ -110,22 +110,14 @@ function Section2() {
           <div className='figma-description'>
             <img src="/figma_icon.svg" alt="" />
             <h2>Figma file included</h2>
-            <p>
-              Send us an email to
-              <br></br>
-              <a href="mailto:brandingfoliox@brixtemplates.com" class="">
-                brandingfoliox@brixtemplates.com
-              </a>
-              with your purchase receipt, and we will send you the editable Figma file for the
-              <span class="text-no-wrap">
-                Brandingfolio X template.
-              </span>
-            </p>
+            <p>Send us an email to brandingfoliox@brixtemplates.com with your purchase receipt, and we will send you the editable Figma file for the Brandingfolio X template.</p>
             <div className='request-file'>
               <a href="#" class="btn btn-primary">Request Figma file</a>
             </div>
           </div>
-          <img className='brand-figma' src="/figma.png" alt="" />
+          <div className='figmaimg'>
+            <img className='brand-figma' src="/figma.png" alt="" />
+          </div>
         </div>
         <div className='webflow-templates'>
           <img className='imageWebflow' src="/webflow_template.png" alt="" />
