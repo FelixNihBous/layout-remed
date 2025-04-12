@@ -1,6 +1,6 @@
 .section2-container {
-    width: 100vw;
-    height: auto;
+    width: 100%;
+    min-height: 100vh;
     padding-top: 150px;
     background-color: white;
     display: flex;
@@ -195,7 +195,6 @@
 }
 
 .mainPage-container {
-    
     display: flex;
     flex-direction: column;
     width: 100vw;
