@@ -39,6 +39,8 @@ function Section2() {
   const mainPageContainerRef = useRef(null);
   const buyTemplate1Ref = useRef(null);
   const buyTemplate2Ref = useRef(null);
+  const requestFileRef = useRef(null);
+  const browserTemplatesRef = useRef(null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -50,6 +52,8 @@ function Section2() {
         { ref: mainPageContainerRef.current, trigger: mainPageContainerRef.current },
         { ref: buyTemplate1Ref.current, trigger: buyTemplate1Ref.current },
         { ref: buyTemplate2Ref.current, trigger: buyTemplate2Ref.current },
+        { ref: requestFileRef.current, trigger: requestFileRef.current },
+        { ref: browserTemplatesRef.current, trigger: browserTemplatesRef.current },
       ];
 
       elements.forEach(({ ref, trigger }) => {
@@ -58,6 +62,67 @@ function Section2() {
           { opacity: 0, y: 50 },
           { opacity: 1, y: 0, duration: 1, scrollTrigger: { trigger: trigger, start: "top 80%", once: true } }
         );
+      });
+
+      // Hover animations for buttons
+      gsap.to(buyTemplate1Ref.current, {
+        scale: 0.95,
+        duration: 0.2,
+        paused: true,
+        ease: 'power2.out',
+      });
+
+      gsap.to(buyTemplate2Ref.current, {
+        scale: 0.95,
+        duration: 0.2,
+        paused: true,
+        ease: 'power2.out',
+      });
+
+      gsap.to(requestFileRef.current, {
+        scale: 0.95,
+        duration: 0.2,
+        paused: true,
+        ease: 'power2.out',
+      });
+
+      gsap.to(browserTemplatesRef.current, {
+        scale: 0.95,
+        duration: 0.2,
+        paused: true,
+        ease: 'power2.out',
+      });
+
+      buyTemplate1Ref.current.addEventListener('mouseenter', () => {
+        gsap.to(buyTemplate1Ref.current, { paused: false, scale: 0.95 });
+      });
+
+      buyTemplate1Ref.current.addEventListener('mouseleave', () => {
+        gsap.to(buyTemplate1Ref.current, { scale: 1, duration: 0.2 });
+      });
+
+      buyTemplate2Ref.current.addEventListener('mouseenter', () => {
+        gsap.to(buyTemplate2Ref.current, { paused: false, scale: 0.95 });
+      });
+
+      buyTemplate2Ref.current.addEventListener('mouseleave', () => {
+        gsap.to(buyTemplate2Ref.current, { scale: 1, duration: 0.2 });
+      });
+
+      requestFileRef.current.addEventListener('mouseenter', () => {
+        gsap.to(requestFileRef.current, { paused: false, scale: 0.95 });
+      });
+
+      requestFileRef.current.addEventListener('mouseleave', () => {
+        gsap.to(requestFileRef.current, { scale: 1, duration: 0.2 });
+      });
+
+      browserTemplatesRef.current.addEventListener('mouseenter', () => {
+        gsap.to(browserTemplatesRef.current, { paused: false, scale: 0.95 });
+      });
+
+      browserTemplatesRef.current.addEventListener('mouseleave', () => {
+        gsap.to(browserTemplatesRef.current, { scale: 1, duration: 0.2 });
       });
     });
 
@@ -88,7 +153,7 @@ function Section2() {
             <img src="/figma_icon.svg" alt="" />
             <h2>Figma file included</h2>
             <p>Send us an email to brandingfoliox@brixtemplates.com with your purchase receipt, and we will send you the editable Figma file for the Brandingfolio X template.</p>
-            <div className='request-file'>
+            <div className='request-file' ref={requestFileRef}>
               <a href="#" className="btn btn-primary">Request Figma file</a>
             </div>
           </div>
@@ -102,8 +167,8 @@ function Section2() {
             <img className='dotIcon' src="/dot_icon.svg" alt="" />
             <h2>Looking for more amazing Webflow Templates?</h2>
             <p>Take a look at our collection of 100+ premium Webflow Templates at BRIX Templates.</p>
-            <div className='template-button'>
-              <a className='browser-templagte' href="">Browser templates</a>
+            <div className='template-button' ref={browserTemplatesRef}>
+              <a className='browser-template' href="">Browser templates</a>
             </div>
           </div>
         </div>

@@ -25,6 +25,22 @@ function Section3() {
           { opacity: 1, y: 0, duration: 1, scrollTrigger: { trigger: trigger, start: "top 80%", once: true } }
         );
       });
+
+      // Hover animation for the buy button
+      gsap.to(buyTemplateRef.current, {
+        scale: 0.95,
+        duration: 0.2,
+        paused: true,
+        ease: 'power2.out',
+      });
+
+      buyTemplateRef.current.addEventListener('mouseenter', () => {
+        gsap.to(buyTemplateRef.current, { paused: false, scale: 0.95 });
+      });
+
+      buyTemplateRef.current.addEventListener('mouseleave', () => {
+        gsap.to(buyTemplateRef.current, { scale: 1, duration: 0.2 });
+      });
     });
 
     return () => ctx.revert();

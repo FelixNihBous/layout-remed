@@ -8,6 +8,8 @@ gsap.registerPlugin(ScrollTrigger);
 function Section5() {
   const buyWrapperRef = useRef(null);
   const allTemplateRef = useRef(null);
+  const buyTemplateBtnRef = useRef(null);
+  const exploreTemplateBtnRef = useRef(null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -22,6 +24,37 @@ function Section5() {
           { opacity: 0, y: 50 },
           { opacity: 1, y: 0, duration: 1, scrollTrigger: { trigger: trigger, start: "top 80%", once: true } }
         );
+      });
+
+      // Hover animations for buttons
+      gsap.to(buyTemplateBtnRef.current, {
+        scale: 0.95,
+        duration: 0.2,
+        paused: true,
+        ease: 'power2.out',
+      });
+
+      gsap.to(exploreTemplateBtnRef.current, {
+        scale: 0.95,
+        duration: 0.2,
+        paused: true,
+        ease: 'power2.out',
+      });
+
+      buyTemplateBtnRef.current.addEventListener('mouseenter', () => {
+        gsap.to(buyTemplateBtnRef.current, { paused: false, scale: 0.95 });
+      });
+
+      buyTemplateBtnRef.current.addEventListener('mouseleave', () => {
+        gsap.to(buyTemplateBtnRef.current, { scale: 1, duration: 0.2 });
+      });
+
+      exploreTemplateBtnRef.current.addEventListener('mouseenter', () => {
+        gsap.to(exploreTemplateBtnRef.current, { paused: false, scale: 0.95 });
+      });
+
+      exploreTemplateBtnRef.current.addEventListener('mouseleave', () => {
+        gsap.to(exploreTemplateBtnRef.current, { scale: 1, duration: 0.2 });
       });
     });
 
@@ -41,7 +74,7 @@ function Section5() {
             design to the next level.
           </p>
           <div className="button-image-container">
-            <div className="white-buy-template">
+            <div className="white-buy-template" ref={buyTemplateBtnRef}>
               <a href="white-buy-button">Buy Template</a>
             </div>
             <img
@@ -60,7 +93,7 @@ function Section5() {
             Looking for more templates? Browse our collection of 100+ Webflow Templates on BRIXTemplates.com
           </p>
           <div className="button-image-container">
-            <div className="purple-template-button">
+            <div className="purple-template-button" ref={exploreTemplateBtnRef}>
               <a href="white-buy-button">Explore more templates</a>
             </div>
             <img
